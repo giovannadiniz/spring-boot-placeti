@@ -52,7 +52,7 @@ public class CidadeController {
         projetoService.alterarCidade(cidadeDto);
     }
 
-    // TODO: Responde PUT em http://localhost:8080/placeti/cidades/1
+    // TODO: Responde DELETE em http://localhost:8080/placeti/cidades/1
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void excluirCidade(@PathVariable("id") Long idCidade) {
