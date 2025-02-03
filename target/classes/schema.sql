@@ -8,3 +8,15 @@ create table Cidade(
   capital boolean not null,  
   PRIMARY KEY ( ID )
 );
+
+drop table if exists Comercio;
+
+create table Comercio(
+    id int not null AUTO_INCREMENT,
+    nome_comercio varchar(100) not null,
+    nome_responsavel varchar(100) not null,
+    tipo_comercio varchar(50) not null,
+    cidade_id int not null,
+    PRIMARY KEY (ID),
+    FOREIGN KEY (cidade_id) REFERENCES Cidade(id)
+);

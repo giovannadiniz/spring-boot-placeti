@@ -19,12 +19,24 @@ public class CidadeDTO {
     private String nome;
     private String uf;
     private Boolean capital;
-    
-    
+
+
     //-----------------------------------------------
     /** Carrega o DTO com dados da entidade */
     //-----------------------------------------------
-    public static CidadeDTO toDTO(Cidade cidade) {
-    	return null;
+    public CidadeDTO (Cidade cidade) {
+        this.id = cidade.getId();
+        this.nome = cidade.getNome();
+        this.uf = cidade.getUf();
+        this.capital = cidade.isCapital();
+    }
+
+    public boolean isCapital() {
+        return capital;
+    }
+
+    public void setCapital(boolean capital) {
+        this.capital = capital;
     }
 }
+
