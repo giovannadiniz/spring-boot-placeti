@@ -45,7 +45,7 @@ public class ProjetoService {
 
 	public Cidade alterarCidade(CidadeDTO dto) {
         Cidade cidade = cidadeRepository.findById(dto.getId())
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "Cidade nao encontrada."));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cidade nao encontrada."));
 
         cidade.setNome(dto.getNome());
         cidade.setUf(dto.getUf());
