@@ -1,4 +1,4 @@
-
+drop table if exists Comercio;
 drop table if exists Cidade;
 
 create table Cidade(
@@ -8,8 +8,6 @@ create table Cidade(
   capital boolean not null,  
   PRIMARY KEY ( ID )
 );
-
-drop table if exists Comercio;
 
 create table Comercio(
     id int not null AUTO_INCREMENT,
